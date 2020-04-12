@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_pitchControlFactor = 10f,m_rollControlFactor = 10f;
 
+    [SerializeField]
+    private GameObject[] guns;
+
     private bool m_isControlEnabled;
  
 
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             HandleMovement();
             HandleRotation();
+            HandleFiring();
         }
         //HandleParticles();
         //this.transform.localPosition = new Vector3(this.transform.localPosition.x, this.transform.localPosition.y, 20f);
@@ -90,6 +94,24 @@ public class PlayerController : MonoBehaviour
         m_isControlEnabled = false;
     }
 
+    private void HandleFiring()
+    {
 
+        if(CrossPlatformInputManager.GetButton("Fire"))
+        {
+            foreach (GameObject gun in guns)
+            {
+                gun.SetActive(true);
+            }
+            
+        }else
+        {
+            foreach (GameObject gun in guns)
+            {
+                gun.SetActive(false);
+            }
+            
+        }
+    }
 
 }

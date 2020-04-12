@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform parent;
     [SerializeField]
     private int m_hitScore = 100;
+    [SerializeField]
+    private int hitPoint = 5;
 
     private ScoreBoard m_score;
     private bool m_destroyed;
@@ -49,12 +51,24 @@ public class Enemy : MonoBehaviour
     {
         if (!m_destroyed)
         {
-            GameObject fx = Instantiate(m_DeathFX, transform.position, Quaternion.identity);
-            fx.transform.parent = parent;
-            Destroy(gameObject);
             m_score.HitScore(m_hitScore);
-            m_destroyed = true;
+            if( hitPoint <=0)
+            {
+                
+                KillEnemy();
+            }
+            hitPoint--;
+            
         }
+        
+    }
+
+    private void KillEnemy()
+    {
+        GameObject fx = Instantiate(m_DeathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
+        Destroy(gameObject);
+        m_destroyed = true;
         
     }
 }

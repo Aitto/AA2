@@ -259,6 +259,9 @@ MonoBehaviour:
   m_yawFactor: 1.25
   m_pitchControlFactor: 20
   m_rollControlFactor: 20
+  guns:
+  - {fileID: 4202792796499614027}
+  - {fileID: 3150246937721357160}
 --- !u!114 &4202792796359961030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +548,12 @@ PrefabInstance:
     - target: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
         type: 3}
       propertyPath: m_Name
-      value: Bullets
+      value: Gun Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1289363345814777248, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
         type: 3}
@@ -602,8 +610,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.minKillSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19ca2bbc5f8a594daf7c84928b7d01a, type: 3}
+--- !u!1 &4202792796499614027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3150246938136081640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4202792796499614024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1289363345814777248, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
@@ -620,7 +669,12 @@ PrefabInstance:
     - target: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
         type: 3}
       propertyPath: m_Name
-      value: Bullets (1)
+      value: Gun Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1289363345814777248, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
         type: 3}
@@ -677,8 +731,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.minKillSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289363345814777254, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19ca2bbc5f8a594daf7c84928b7d01a, type: 3}
+--- !u!1 &3150246937721357160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1289363345814777251, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4202792794958737099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3150246937721357163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1289363345814777248, guid: e19ca2bbc5f8a594daf7c84928b7d01a,
