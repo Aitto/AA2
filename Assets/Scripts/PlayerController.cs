@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private float m_pitchControlFactor = 10f,m_rollControlFactor = 10f;
 
     [SerializeField]
-    private GameObject[] guns;
+    private ParticleSystem[] guns;
 
     private bool m_isControlEnabled;
  
@@ -99,16 +99,18 @@ public class PlayerController : MonoBehaviour
 
         if(CrossPlatformInputManager.GetButton("Fire"))
         {
-            foreach (GameObject gun in guns)
+            foreach (ParticleSystem gun in guns)
             {
-                gun.SetActive(true);
+                ParticleSystem.EmissionModule m = gun.emission;
+                m.enabled = true;
             }
             
         }else
         {
-            foreach (GameObject gun in guns)
+            foreach (ParticleSystem gun in guns)
             {
-                gun.SetActive(false);
+                ParticleSystem.EmissionModule m = gun.emission;
+                m.enabled = false;
             }
             
         }
